@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrices</title>
+</head>
+
+<body>
+    <!--
+    =========
+    MATRICES
+    ========
+    def. Conjuntos de elementos colocados de forma adyacente,con sintaxis entre comasm,
+     en la memoria    de forma que nos permite referirnos a los elementos con un solo nombre
+
+     Caracteristicas:
+     1.Elemento de la raiz, siempre tendrá asociado un indice
+     2.el `primer elemento de un array su posicion siempre siempre será 0
+     var angualr =0
+     var angular2 ==="";
+
+     TIPOS DE MATRICES:
+     1. Estabilidad del Tamaño
+     2.Segun su dimension
+
+
+     *la propiedad lenght, de las matrices o arrays, nos refejará el 
+     tamaño de dicho , edÇ: el numero de elementos de los que consta.
+        a. var pantalones = new Array (3), array de 3 elementos
+        b. var camisetas = new Array(strench0, fit1, casual2)
+        c  var miArray = new Array() - Sintaxis -
+        d var miArray = []: any
+-->
+    <script>
+
+        var numero = new Array(1, 2, 3, 4, 5, 6, 7, 8);
+        /* var numero  = [1,2,3,4,5,6,7,8]  => uso adyacente a la memoria  */
+
+        /*recorrido de Array*/
+        for (let i = 0; i < numero.length; i++) {
+            console.log(numero[i]);
+        }
+        console.log(numero);
+        //for of
+        for (const i of numero) {
+            console.log(i)
+        }
+        //for in
+        for (const i in numero) {
+            console.log(i)
+        }
+document.write("Nuestro Array  " + numero+ "<br>");
+// METODOS DE OBJECT ARRAY 
+
+//1. ARRAY INVERTIDO
+
+        document.write("Array invertido: " + numero.reverse()+ "<br>");
+
+//2. ARRAY ASCENDENTE
+        document.write(" Array ascendente: " + numero.sort()+"<br>");
+
+//3 ARRAY A ESTABLECER MODO DE SEPARACION DE ELEMENTOS
+document.write(" Array separado por: " + numero.join('|'));
+
+//4 ARRAY A PARTIR DE UN ELEMENTO CONCRETO
+document.write(" Array a partir de la posicion ..." + numero.slice(4)+"<br>");
+
+//5. Array de ESTATICA A DINAMICA
+
+var letras = ["a","b","c","d","e"];
+//a. Concatenacion de String, numeros, 
+document.write("Concatenacion de los dos Arrays "+ numero.concat(letras)+"<br>");
+document.write("Concatenacion de los dos Arrays "+ letras.concat(numero)+"<br>");
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
