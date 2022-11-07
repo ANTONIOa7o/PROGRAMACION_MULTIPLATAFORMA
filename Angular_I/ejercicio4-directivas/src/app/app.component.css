@@ -1,0 +1,20 @@
+hr{
+    width: 100%;
+    color: silver;
+    height: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 5px 8px slategray;
+}
+.rojo{
+color: red;
+font-weight: bold;
+}
+.verde{
+color: green;
+font-weight: bold;
+}
+.resaltar{
+    font-weight: bold;
+    font-style: italic;
+    font-size: larger;
+}
