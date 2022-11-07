@@ -1,0 +1,62 @@
+<h1>Ejemplo Pipes</h1>
+<!--
+      Pipes como elementos que usamos en el DOM, donde el HTML junto con las directivas
+  que vayan a tomar un elemento de entrada y del mismo cursarán cierto formato, ofreciendo
+  una salida diferente.
+  Por defecto Angular trae una cantidad determinada de pipes, generalmente serán para
+  configuraciones o cambios comunes
+  Los pipes podrán configurarse según necesidades o tomar parámetros concretos, encadenadenarlos, etc.
+  Tipos:
+-->
+<h2>
+  Pipes de texto
+</h2>
+<ul>
+  <li>Sin formato: {{texto}}</li>
+  <li>En minusculas: {{texto | lowercase}}</li>
+  <li>En mayuscula: {{texto | uppercase}}</li>
+  <li>Titulo {{texto | titlecase}}</li>
+</ul>
+<h2>Pipes Números</h2>
+<ul>
+  <li>Sin formato: {{numero}}</li>
+  <li>4 decimales: {{numero | number: '.4-4'}}</li>
+  <li>2 decimales: {{numero | number: '.2-2'}}</li>
+  <li>n digitos con y decimales: {{numero | number:'10.3-3'}}</li>
+</ul>
+<h2>Pipes de Porcentaje</h2>
+<ul>
+  <li>Sin formato {{porcentaje}}</li>
+  <li>Con formato: {{porcentaje | percent}}</li>
+  <li>Porcentaje con 1 decimal: {{porcentaje | percent:'.1-1'}}</li>
+  <li>Porcentaje con n digitos y xdecimal: {{porcentaje | percent:'3.2-2'}}</li>
+</ul>
+<h2>Pipes Monedas</h2>
+<ul>
+  <li>Sin formato: {{numero}}</li>
+  <li>Con formato: {{numero | currency}}</li>
+  <li>Con formato Euro: {{numero | currency:'EUR'}}</li>
+  <li>Con formato Euro codigo: {{numero | currency:'EUR':'code'}}</li>
+  <li>Con formato Euro simbolo: {{numero | currency:'EUR':'symbol'}}</li>
+  <li>Con formato Euro n digitos y xdecimal: {{numero | currency:'EUR':'symbol': '6.3-3'}}</li>
+  <!--Definir simbolo y formato  para los decimales-->
+</ul>
+
+<h2>Pipes fecha(objet)</h2>
+<ul>
+  <li>Sin formato {{fecha}}</li>
+  <li>Con formato {{fecha | date:'short'}}</li>
+  <li>Con formato fecha completa {{fecha | date:'full'}}</li>
+  <li>Con formato fecha {{fecha | date:'shortDate'}}</li>
+  <li>Con formato Hora {{fecha | date:'shortTime'}}</li>
+  <li>Con formato personalizado {{fecha | date:'dd/MM/yy ; HH:mm:ss'}}</li>
+</ul>
+<h2>Pipes Json </h2>
+<ol>
+  <li>Sin formato: {{jsonObjeto}}</li>
+  <li>Con formato: {{jsonObjeto | json}}</li>
+  <li>Con formato accediendo a un elemento: {{jsonObjeto.nombre}}</li>
+  <li>
+    <pre>Otro formato: {{jsonObjeto | json}}</pre>
+  </li>
+</ol>
