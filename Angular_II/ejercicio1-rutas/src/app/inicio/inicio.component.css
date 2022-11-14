@@ -1,0 +1,10 @@
+#carouselExampleFade{
+
+    background-image: url(../../assets/34579-metalicos.jpg) ;
+    background-repeat: no-repeat;
+}
+.carrousel-inner,#carouselExampleFade,img{
+    height: 410px;
+
+    margin: 0 auto;
+}

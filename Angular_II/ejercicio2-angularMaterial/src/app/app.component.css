@@ -1,0 +1,43 @@
+button {
+    margin: 10px;
+    padding: 2px;
+}
+
+mat-tab-group {
+
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*
+Estilos inyectados a la tarjeta
+*/
+.example-card {
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.example-header-image {
+    background-image: url('https://picsum.photos/id/103/2592/1936');
+    background-size: cover;
+}
+/*
+Estilos traidos de la Api Angular Material
+*/
+.example-container {
+    width: 500px;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }

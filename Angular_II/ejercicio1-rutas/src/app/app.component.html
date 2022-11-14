@@ -1,0 +1,75 @@
+<!--
+    LA NAVEGACION: routerLink
+
+
+Angular para implantar la navegacion en SPA´s la forma más eficaza hasta ahora
+encontrada, será usando el llamado routerlink, esta directiva reduce carga y tiempos
+de carga y aprovecha al máximo las capacidades de conexion que ofrece estos 
+frameWork, comparado con el enlaces hacia su atributo principal href, los enlaces
+tradicionales, con su consiguiente redireccion
+  
+
+-->
+<div class="container fixed-top">
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-danger" routerLink="inicio" routerLinkActive="active"><img src="assets/icoAngular.png" alt=""> Angular </a>
+      <!-- la etiqueta que sustituye a <a href="">
+                                       <a routerLink="/nombreRuta"
+          Otros atributos asociados a routerlink:.
+          *routerLinkActive ="activa el link o con una clase o bootstrap"    
+      -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="  navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="text-white nav-link active" aria-current="page" routerLink="c1"
+              routerLinkActive="active">Instalacion</a>
+          </li>
+          <li class="nav-item">
+            <a class=" text-white  nav-link" routerLink='c2' routerLinkActive="active">Directivas Principales</a>
+          </li>
+          <li class=" nav-item">
+            <!--
+              Cuando queremos generar parámetros opcionales que contribuyen a informacion
+              del enlace o de la ruta, buscas su declaracion en el mismo enlace
+            -->
+            <a class="  text-white  nav-link" routerLink="c3/capital"
+            [queryParams]="{entrada:'12/11/2022',salida:'14/11/2022', efectivo: '12000€'}"
+            routerLinkActive="active">Configuraciones Angular</a>
+          </li>
+        </ul>
+        <span class="text-muted">
+          Selecciona un Opcion
+        </span>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>
+
+<!-- 
+  Tipos de visualizaciones:
+  i) Horizontal
+  Una manera de lanzar el selector
+  <app-componente1></app-componente1>
+  <app-componente2></app-componente2>
+  <app-componente3></app-componente3>
+
+  ii)Vertical (Navegacion)
+  Lanzaremos el template como selector a traves de 
+  la etiqueta:
+  <router-outlet></router-outlet>
+*Etiqueta especial de Angular que ofrece la muestra de los componentes hijos.
+*Sin incluir dicha etiqueta solo podremos mostrar dichos componentes desde la horizontalidad
+*Por defecto -> TODOS LOS COMPONENTES SON HIJOS del componentes AppComponent, de ahi
+que para reindexar o renderizar cada uno de los componentes del routing dependiendo
+de la pagina en la que nos encontramos
+*En definitiva en su ejecucion lo que realiza mantien el index.html, lienzo base
+donde muestra o quita el componente, al que hace referencia, solo con el evento
+click
+-->
