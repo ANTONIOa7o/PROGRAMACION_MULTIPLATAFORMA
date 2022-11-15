@@ -1,0 +1,31 @@
+
+<div class="">
+  <mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Tu Empresa</mat-card-title>
+    <mat-card-subtitle>Ubicacion</mat-card-subtitle>
+  </mat-card-header>
+  <!-- Mostraremos mapa aqui ⇓ -->
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+  <mat-card-content>
+    <p>
+      Direccion: C/ Virgen del Lluc <br>
+      28840 Madrid
+
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button matBadge="6" matBadgePosition="before" matBadgeColor="accent" matBadgeSize="medium">
+      share
+    </button>
+    <button mat-button color="primary">
+      <mat-icon matBadge="8" matBadgeColor="warn">
+        home</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>
+</div>
+
