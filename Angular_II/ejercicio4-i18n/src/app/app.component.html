@@ -1,0 +1,73 @@
+<!--
+          LA INTERNACIONALIZACION(i18n)
+
+  Siempre ha habido la necesidad de globalizar la informacion, tanto en su
+  difusion como en su democratización. Intencionalidad principal traduccion
+  de varios idiomas y diversas divisas, ejecutandose de forma automática 
+  sin necesidad de realizar cambios sustanciales en la aplicacion
+
+  Proceso de implantacion:
+  1º.- ngx-translate: libreria de soporte a la traduccion, para Angular. 
+  La sintaxis para su instalacion será:
+  ~$npm i @ngx-translate/core @ngx-translate/http-loader --save
+
+  2º.-Creacion de una carpeta i18n, localizado en assets, en dicha carpeta,
+  crearemos los archivos.json con los diversos idiomas para su traduccion 
+  simultanea(http-loader)
+  [Sintaxis en es.json:{
+    "texto.español":"Sentencia_en_Español"
+  }]
+-->
+<div class="container">
+  <!--Cabecera Header-->
+
+  <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+    <div class="card-body">
+      <h1 class="card-title">{{'app.titulo' | translate}}</h1>
+      <h5 class="card-title">{{'app.titulo2' | translate}}</h5><br>
+      <p class="card-text" style="text-align:justify ;">
+        {{'app.texto' | translate}}
+      </p>
+      <span><button type="button" class="btn btn-outline-warning btn-lg">{{'app.boton' | translate}}</button></span>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+
+  </div>
+
+  <!--Barra Navegacion-->
+  <nav class="navbar navbar-expand-lg bg-light shadow-lg p-3 mb-5 bg-body rounded">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><strong>i18n</strong> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Instalacion</a>
+          <a class="nav-link active" href="#">Librerias</a>
+          <a class="nav-link active" href="#">HttpClientModule</a>
+          <a class="nav-link active">Aplicaciones e-commerce</a>
+        </div>
+      </div>
+      <span>
+        <a (click)="cambiarIdioma('es')">
+          <img src="../assets/banderas/spain.png" alt="">
+        </a>
+        <a (click)="cambiarIdioma('en')">
+          <img src="../assets/banderas/england.png" alt="">
+        </a>
+        <a (click)="cambiarIdioma('fr')">
+          <img src="../assets/banderas/france.png" alt="">
+        </a>
+        <a (click)="cambiarIdioma('de')">
+          <img src="../assets/banderas/germany.png" alt="">
+        </a>
+        <!--   <a (click)="cambiarIdioma('ct')" href="">
+          <img src="" alt="">
+        </a> -->
+      </span>
+    </div>
+  </nav>
+</div>
+<hr>
