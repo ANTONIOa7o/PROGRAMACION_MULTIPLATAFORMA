@@ -1,0 +1,74 @@
+<!--
+            SERVICES
+
+
+      Ofrecen la posibilidad de centralizar funcionalidades concretas 
+      a nuestra aplicacion, que pueden ser usados desde cuaquier componente.
+      Proceso de desarrollo:
+      
+      a. $ ng generate service services/nombre_servicio
+      b. Importar en app.module.ts
+      c. Declaramos el servicio => nombre_servicio.service
+      d.Inyectamos el servicio => app_component.component.ts
+
+-->
+
+<div class="container" style="text-align:center ; margin:0 auto ; width:380px ;">
+      <mat-toolbar class="bg-dark p-4">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                  aria-expanded="false" aria-label="Toggle navigation" mat-icon-button class="example-icon"
+                  aria-label="Example icon-button with menu icon">
+                  <mat-icon>search</mat-icon>
+            </button>
+            <span>My App POKEMON</span>
+            <span class="example-spacer"></span>
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                  <mat-icon>home</mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                  <mat-icon>build</mat-icon>
+            </button>
+      </mat-toolbar>
+      <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+                  <h5 class="text-white h4">Encuentra tu pokemon</h5>
+                  <span class="text-white h5">Nombre <input [(ngModel)]="nombre" type="text"></span>&nbsp;
+                  <button (click)="buscar()" class="btn btn-outline-light">Buscar</button>
+
+                  <div class="card text-bg-dark mb-3">
+                        <div class="card-body">
+                              <div *ngIf="pokemon !=null">
+                                    <h5 class="card-title">LA BUSQUEDA DE TU POKEMON ES:</h5>
+                                    <!--iMAGEN-->
+                                    <img #front src="{{pokemon.sprites.front_default}}">
+                                    <img #back src="{{pokemon.sprites.back_default}}">
+                                    <p class="card-text"></p>
+                                    <!--Recorridos de los elementos objetos-->
+                                    <ul>
+                                          <li>Nombre:{{pokemon.name}}</li>
+                                          <li>Peso: {{pokemon.weight}}</li>
+                                          <li>Altura: {{pokemon.height}}</li>
+                                          <li>Habilidades
+                                                <ol>
+                                                      <li *ngFor="let habilidades of pokemon.abilities">
+                                                            {{habilidades.ability.name}}
+                                                      </li>
+                                                </ol>
+                                          </li>
+                                    </ul>
+                              </div>
+                        </div>
+                  </div>
+
+            </div>
+      </div>
+
+
+
+      <h1>
+      Todos los Pokemon
+</h1>
+<li *ngFor="let pokemon of pokemons">
+      {{pokemon.name}}
+</li> 
